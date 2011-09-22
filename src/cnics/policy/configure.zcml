@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="cnics.policy">
+
+  <includeDependencies package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="cnics.policy"
+      directory="profiles/default"
+      description="Installs the cnics.policy package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+<!--
+  <genericsetup:importStep
+      name="leadtheway-various"
+      title="Additional leadtheway site policy setup"
+      description="leadtheway site policy configuration"
+      handler="leadtheway.policy.setuphandlers.importVarious">
+    <depends name="rolemap"/>
+  </genericsetup:importStep>
+-->
+
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>
