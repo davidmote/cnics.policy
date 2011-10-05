@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>1000</version>
+  <version>000</version>
     <dependencies>
-        <dependency>profile-plone.app.caching:default</dependency>
         <dependency>profile-collective.indexing:default</dependency>
         <dependency>profile-jyu.z3cform.datepicker:default</dependency>
-        <dependency>profile-plone.app.ldap:default</dependency>
-
+        <dependency>profile-plone.app.caching:default</dependency>
+        <dependency>profile-plone.app.ldap:ldap</dependency>
+        
+        <dependency>profile-beast.cnics.sequencedb:default</dependency>
     </dependencies>
 </metadata>
