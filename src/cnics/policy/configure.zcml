@@ -15,16 +15,4 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-<!--
-  <genericsetup:importStep
-      name="leadtheway-various"
-      title="Additional leadtheway site policy setup"
-      description="leadtheway site policy configuration"
-      handler="leadtheway.policy.setuphandlers.importVarious">
-    <depends name="rolemap"/>
-  </genericsetup:importStep>
--->
-
-  <!-- -*- extra stuff goes here -*- -->
-  
 </configure>
