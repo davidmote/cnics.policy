@@ -6,7 +6,7 @@
         <dependency>profile-jyu.z3cform.datepicker:default</dependency>
         <dependency>profile-plone.app.caching:default</dependency>
         <dependency>profile-plone.app.ldap:ldap</dependency>
-        
+        <dependency>profile-beast.securelogin:default</dependency>
         <dependency>profile-beast.cnics.sequencedb:default</dependency>
     </dependencies>
 </metadata>
