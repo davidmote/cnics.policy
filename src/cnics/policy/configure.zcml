@@ -9,9 +9,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="cnics.policy"
+      title="CNICS RES Site Policy"
       directory="profiles/default"
-      description="Installs the cnics.policy package"
+      description="Installs the CNICS RES Site policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
