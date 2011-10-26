@@ -31,7 +31,7 @@ setup(
         'plone.app.caching',
         'plone.app.ldap',
         'beast.securelogin',
-        'beast.cnics.sequencedb',
+# 'beast.cnics.sequencedb',
         ],
     extras_require=dict(
         test=['plone.app.testing'],
