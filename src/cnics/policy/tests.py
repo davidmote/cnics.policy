@@ -1,55 +1,34 @@
-import unittest
+import unittest2 as unittest
+from plone.app.testing import applyProfile
+from Products.CMFCore.utils import getToolByName
 
-#from zope.testing import doctestunit
-#from zope.component import testing
-from Testing import ZopeTestCase as ztc
+from cnics.policy.testing import CNICS_POLICY_INTEGRATION_TESTING
 
-from Products.Five import fiveconfigure
-from Products.PloneTestCase import PloneTestCase as ptc
-from Products.PloneTestCase.layer import PloneSite
-ptc.setupPloneSite()
+class TestSetup(unittest.TestCase):
 
-import leadtheway.policy
+    layer = CNICS_POLICY_INTEGRATION_TESTING
 
+    def test_indexing_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('collective.indexing'))
 
-class TestCase(ptc.PloneTestCase):
+    def test_datepicker_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('jyu.z3cform.datepicker'))
 
-    class layer(PloneSite):
+    def test_caching_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('plone.app.caching'))
 
-        @classmethod
-        def setUp(cls):
-            fiveconfigure.debug_mode = True
-            ztc.installPackage(leadtheway.policy)
-            fiveconfigure.debug_mode = False
+    def test_ldap_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('plone.app.ldap'))
 
-        @classmethod
-        def tearDown(cls):
-            pass
-
-
-def test_suite():
-    return unittest.TestSuite([
-
-        # Unit tests
-        #doctestunit.DocFileSuite(
-        #    'README.txt', package='leadtheway.policy',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
-
-        #doctestunit.DocTestSuite(
-        #    module='leadtheway.policy.mymodule',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
-
-
-        # Integration tests that use PloneTestCase
-        #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='leadtheway.policy',
-        #    test_class=TestCase),
-
-        #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='leadtheway.policy',
-        #    test_class=TestCase),
-
-        ])
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
+    def test_sequencedb_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('beast.cnics.sequencedb'))

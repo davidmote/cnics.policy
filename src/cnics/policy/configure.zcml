@@ -9,22 +9,10 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="cnics.policy"
+      title="CNICS RES Site Policy"
       directory="profiles/default"
-      description="Installs the cnics.policy package"
+      description="Installs the CNICS RES Site policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-<!--
-  <genericsetup:importStep
-      name="leadtheway-various"
-      title="Additional leadtheway site policy setup"
-      description="leadtheway site policy configuration"
-      handler="leadtheway.policy.setuphandlers.importVarious">
-    <depends name="rolemap"/>
-  </genericsetup:importStep>
--->
-
-  <!-- -*- extra stuff goes here -*- -->
-  
 </configure>
