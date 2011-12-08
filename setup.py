@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.0'
+version = '0.1.2'
 
 setup(
     name='cnics.policy',
@@ -31,7 +31,8 @@ setup(
         'plone.app.caching',
         'plone.app.ldap',
         'beast.securelogin',
-# 'beast.cnics.sequencedb',
+        # This product is still unstable, don't include it yet
+        #'beast.cnics.sequencedb',
         ],
     extras_require=dict(
         test=['plone.app.testing'],

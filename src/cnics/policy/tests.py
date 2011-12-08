@@ -28,7 +28,7 @@ class TestSetup(unittest.TestCase):
         quickinstaller = getToolByName(portal, 'portal_quickinstaller')
         self.assertTrue(quickinstaller.isProductInstalled('plone.app.ldap'))
 
-    def test_sequencedb_installed(self):
-        portal = self.layer['portal']
-        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
-        self.assertTrue(quickinstaller.isProductInstalled('beast.cnics.sequencedb'))
+#    def test_sequencedb_installed(self):
+#        portal = self.layer['portal']
+#        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+#        self.assertTrue(quickinstaller.isProductInstalled('beast.cnics.sequencedb'))
